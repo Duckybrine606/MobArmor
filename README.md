@@ -5,4 +5,4 @@ This project CANNOT be updated because I lost the files when a BIG error happene
 
 I might Re-code it all from scratch if I decide to someday though
 
-Click on MobArmorFinal.jar and click "view raw" to automatically download it 
+Click on MobArmorFinal.jar and click "view raw" to automatically download it (or just click download i just realised that exists lol)
