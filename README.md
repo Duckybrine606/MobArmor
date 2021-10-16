@@ -11,3 +11,5 @@ Click on MobArmorFinal.jar and click "view raw" to automatically download it (or
 
 UPDATE: I found some screenshots of the listeners class (which is like 75% of the code) that i had. i'll copy the code and then create the main class again.
 i may even update it later when im back from vacation.
+
+Update 16.10.2021: I have coded everything from the beginning. I will update the plugin for 1.17 shortly.
