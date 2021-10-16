@@ -1,0 +1,120 @@
+package me.Duckybrine.MobArmor.Listeners;
+
+import org.bukkit.entity.EntityType;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
+import org.bukkit.Material;
+import org.bukkit.entity.Creeper;
+import org.bukkit.entity.Zombie;
+import org.bukkit.entity.Skeleton;
+import org.bukkit.entity.Piglin;
+import org.bukkit.entity.Husk;
+import org.bukkit.entity.Enderman;
+import org.bukkit.entity.WitherSkeleton;
+import org.bukkit.entity.Stray;
+import org.bukkit.entity.ZombieVillager;
+import org.bukkit.entity.PigZombie;
+import org.bukkit.inventory.ItemStack;
+
+public class listeners implements Listener {
+	
+	@EventHandler
+	public void CreatureSpawn(CreatureSpawnEvent event) {
+		
+		if(event.getEntityType() == EntityType.CREEPER) {
+			Creeper creeper = (Creeper) event.getEntity();
+			creeper.setPowered(true);
+		}
+		
+		if(event.getEntityType() == EntityType.ZOMBIE) {
+			Zombie zombie = (Zombie) event.getEntity();
+			
+			zombie.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
+			zombie.getEquipment().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
+			zombie.getEquipment().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
+			zombie.getEquipment().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
+			
+			zombie.getEquipment().setItemInMainHand(new ItemStack(Material.IRON_AXE));
+		}
+		
+		if(event.getEntityType() == EntityType.SKELETON) {
+			Skeleton skeleton = (Skeleton) event.getEntity();
+			
+			skeleton.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
+			skeleton.getEquipment().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
+			skeleton.getEquipment().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
+			skeleton.getEquipment().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
+		}
+		
+		if(event.getEntityType() == EntityType.PIGLIN) {
+			Piglin piglin = (Piglin) event.getEntity();
+			
+			piglin.getEquipment().setHelmet(new ItemStack(Material.GOLDEN_HELMET));
+			piglin.getEquipment().setChestplate(new ItemStack(Material.GOLDEN_CHESTPLATE));
+			piglin.getEquipment().setLeggings(new ItemStack(Material.GOLDEN_LEGGINGS));
+			piglin.getEquipment().setBoots(new ItemStack(Material.GOLDEN_BOOTS));
+			
+			piglin.getEquipment().setItemInMainHand(new ItemStack(Material.GOLDEN_SWORD));
+		}
+		
+		if(event.getEntityType() == EntityType.HUSK) {
+			Husk husk = (Husk) event.getEntity();
+			
+			husk.getEquipment().setHelmet(new ItemStack(Material.IRON_HELMET));
+			husk.getEquipment().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
+			husk.getEquipment().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
+			husk.getEquipment().setBoots(new ItemStack(Material.IRON_BOOTS));
+			
+			husk.getEquipment().setItemInMainHand(new ItemStack(Material.IRON_SWORD));
+		}
+		
+		if(event.getEntityType() == EntityType.ENDERMAN) {
+			Enderman enderman = (Enderman) event.getEntity();
+			
+			enderman.getEquipment().setItemInMainHand(new ItemStack(Material.IRON_AXE));
+		}
+		
+		if(event.getEntityType() == EntityType.WITHER_SKELETON) {
+			WitherSkeleton witherskeleton = (WitherSkeleton) event.getEntity();
+			
+			witherskeleton.getEquipment().setHelmet(new ItemStack(Material.LEATHER_HELMET));
+			witherskeleton.getEquipment().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
+			witherskeleton.getEquipment().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
+			witherskeleton.getEquipment().setBoots(new ItemStack(Material.LEATHER_BOOTS));
+		}
+		
+		if(event.getEntityType() == EntityType.STRAY) {
+			Stray stray = (Stray) event.getEntity();
+			
+			stray.getEquipment().setHelmet(new ItemStack(Material.IRON_HELMET));
+			stray.getEquipment().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
+			stray.getEquipment().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
+			stray.getEquipment().setBoots(new ItemStack(Material.IRON_BOOTS));
+		}
+		
+		if(event.getEntityType() == EntityType.ZOMBIE_VILLAGER) {
+			ZombieVillager zombievillager = (ZombieVillager) event.getEntity();
+			
+			zombievillager.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
+			zombievillager.getEquipment().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
+			zombievillager.getEquipment().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
+			zombievillager.getEquipment().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
+			
+			zombievillager.getEquipment().setItemInMainHand(new ItemStack(Material.DIAMOND_SWORD));
+		}
+		
+		if(event.getEntityType() == EntityType.ZOMBIFIED_PIGLIN) {
+			PigZombie zombifiedpiglin = (PigZombie) event.getEntity();
+			
+			zombifiedpiglin.getEquipment().setHelmet(new ItemStack(Material.GOLDEN_HELMET));
+			zombifiedpiglin.getEquipment().setChestplate(new ItemStack(Material.GOLDEN_CHESTPLATE));
+			zombifiedpiglin.getEquipment().setLeggings(new ItemStack(Material.GOLDEN_LEGGINGS));
+			zombifiedpiglin.getEquipment().setBoots(new ItemStack(Material.GOLDEN_BOOTS));
+			
+			zombifiedpiglin.getEquipment().setItemInMainHand(new ItemStack(Material.GOLDEN_SWORD));
+		}
+		
+	}
+
+}
